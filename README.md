@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Serverless Invoice Scanner Using AWS AI Services
 
 ## Project Overview
@@ -68,3 +69,7 @@ Infrastructure deployment, implementation and testing are in progress.
 ## Disclaimer
 
 This project is intended for educational purposes. AWS services may incur charges depending on usage.
+=======
+# serverless-invoice-scanner
+AI-powered serverless invoice processing using AWS Lambda, S3, Textract, Bedrock and DynamoDB.
+>>>>>>> 7eab444c292a48e7fbc2a239e14fa0012d623a5e
