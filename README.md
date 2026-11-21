@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Serverless Invoice Scanner Using AWS AI Services
 
 ## Project Overview
