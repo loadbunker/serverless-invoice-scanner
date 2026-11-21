@@ -1,0 +1,73 @@
+# Testing and Troubleshooting Guide
+
+## Project: Serverless Invoice Scanner
+
+## 1. Testing Objectives
+
+Verify that all AWS services communicate correctly and that invoice processing works from upload to retrieval.
+
+## 2. Functional Testing
+
+| Test ID | Test Scenario | Expected Result |
+|---|---|---|
+| TC01 | User registration | User successfully registers |
+| TC02 | User login | Authentication succeeds |
+| TC03 | Upload PDF invoice | Invoice uploaded to S3 |
+| TC04 | Upload image invoice | Image uploaded to S3 |
+| TC05 | S3 event notification | Lambda triggered |
+| TC06 | Textract processing | Invoice information extracted |
+| TC07 | Bedrock processing | Structured information generated |
+| TC08 | DynamoDB storage | Invoice record saved |
+| TC09 | Retrieve invoices | Records returned successfully |
+| TC10 | Unauthorized API request | Access denied |
+
+## 3. Security Testing
+
+| Test ID | Test Scenario | Expected Result |
+|---|---|---|
+| ST01 | Access private S3 bucket | Public access denied |
+| ST02 | Access API without authentication | Request rejected |
+| ST03 | User accesses another user's invoices | Access denied |
+| ST04 | Unauthorized Lambda resource access | Access denied |
+| ST05 | Check frontend credentials | No privileged AWS credentials exposed |
+
+## 4. Failure Testing
+
+| Test ID | Test Scenario | Expected Result |
+|---|---|---|
+| FT01 | Upload corrupted PDF | Processing fails gracefully |
+| FT02 | Upload unsupported file | File rejected |
+| FT03 | Textract processing failure | Error logged |
+| FT04 | Bedrock invocation failure | Error handled |
+| FT05 | DynamoDB write failure | Error logged and handled |
+| FT06 | Duplicate processing event | No duplicate invoice record |
+
+## 5. Monitoring
+
+Use Amazon CloudWatch to monitor:
+
+- Lambda execution logs.
+- Lambda invocation errors.
+- Lambda duration.
+- API Gateway errors.
+- Processing failures.
+
+Use AWS CloudTrail to review API activity and resource changes.
+
+## 6. Troubleshooting Reference
+
+| Problem | Investigation |
+|---|---|
+| S3 upload failure | Check bucket permissions and presigned URL |
+| Lambda not triggered | Check S3 event notification |
+| Textract failure | Check IAM permissions and document format |
+| Bedrock failure | Check model access and IAM permissions |
+| DynamoDB write failure | Check table name and IAM permissions |
+| API authorization failure | Check Cognito JWT configuration |
+| Frontend connection failure | Check API endpoint and CORS |
+
+## 7. Testing Status
+
+Testing procedures documented.
+
+Actual test results will be recorded after implementation and execution.
