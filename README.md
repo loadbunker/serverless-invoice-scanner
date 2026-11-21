@@ -21,6 +21,7 @@ The application allows users to upload invoices, extract information using Amazo
 | Amazon Route 53 | Domain management |
 
 ## Architecture
+![Serverless Invoice Scanner Architecture](architecture/architecture.png)
 
 The application follows an event-driven serverless architecture.
 
