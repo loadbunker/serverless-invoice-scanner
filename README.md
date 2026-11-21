@@ -66,9 +66,7 @@ Infrastructure deployment, implementation and testing are in progress.
 - AI service integration
 - Cloud monitoring and troubleshooting
 
-## Disclaimer
 
-This project is intended for educational purposes. AWS services may incur charges depending on usage.
 =======
 # serverless-invoice-scanner
 AI-powered serverless invoice processing using AWS Lambda, S3, Textract, Bedrock and DynamoDB.
